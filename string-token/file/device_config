@@ -1,0 +1,11 @@
+#MeasureX Device configuration file
+        serial= 0422
+        transformation=1
+        calibration=1
+        sensorX=64
+        sensorY=32
+        deviceX=64
+        deviceY=32
+        gain=0.1
+        delay=0.4
+        N=1

@@ -1,0 +1,10 @@
+scource:
+sudo apt-get install libjson0 libjson0-dev
+sudo apt-get install libjson0-dbg
+
+compile:
+gcc -o json json.c -ljson
+gcc -o json json.c -ljson -std=c99
+
+website:
+http://linuxprograms.wordpress.com/2010/05/20/json-c-libjson-tutorial/
