@@ -1,0 +1,10 @@
+#!/usr/bin/expect
+
+set timeout 20
+
+spawn "./math"
+
+expect "number1:" { send "1\r" }
+expect "number2:" { send "2\r" }
+
+interact
