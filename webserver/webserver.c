@@ -1,8 +1,4 @@
 /*
-AUTHOR: Abhijeet Rastogi (http://www.google.com/profiles/abhijeet.1989)
-
-This is a very simple HTTP server. Default port is 10000 and root_dir for the server is your current working directory..
-
 You can provide command line arguments like:- $./a.aout -p [port] -r [path]
 
 for ex. 
@@ -49,6 +45,7 @@ int main(int argc, char* argv[])
     int slot=0;
 
     // ./program -p 50000 -r /var/www/
+    // ./webserver -p 8000 -r/var/www/canvas/smurf
     while ((c = getopt (argc, argv, "p:r:")) != -1)
     {
         switch (c)

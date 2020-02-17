@@ -6,9 +6,22 @@ int main() {
     json_object * jobj = json_object_new_object();
     json_object * sub_obj = json_object_new_object();
 
+
+    // ===== write as json =====
+    /*
+    { 
+        "string": 
+        { 
+            "str2": "fuck u" 
+        }, 
+        "int": 10, 
+        "double": 3.140000 
+    }
+    */
+
     unsigned char str1[] = "hello world";
     unsigned char str2[] = "HELLO WORLD"; 
-    unsigned char str3[] = "fuck u";
+    unsigned char str3[] = "Test Test";
 
     // Creating a json string
     json_object *jstring1 = json_object_new_string(str1);

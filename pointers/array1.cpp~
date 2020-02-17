@@ -1,0 +1,51 @@
+// more pointers
+
+#include <iostream>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+using namespace std;
+#define size 4
+int main ()
+{
+	// p
+	unsigned short short_array[] = {0,1,2,65535};
+	unsigned short * short_pointer;
+	unsigned char byte_array[] = {10,11,255,255};
+	unsigned char * byte_pointer;
+
+	short_pointer = short_array;
+	// short_pointer= &array[0];
+	for(int i=0;i<size;i++){
+		printf("int pointer: %p; value: %u;\n",short_pointer,*short_pointer);
+		short_pointer++;
+	}
+
+	byte_pointer=&byte_array[0];
+	// byte_pointer=byte_array[0];
+	for(int i=0;i<size;i++){
+		printf("short pointer: %p; value: %u;\n",byte_pointer,*byte_pointer);
+		byte_pointer++;
+	}
+
+	printf("type casting, byte to short\n");
+	short_pointer = (unsigned short *)byte_array;
+	for(int i=0;i<(size>>1);i++){
+		printf("short pointer: %p; value: %u;\n",short_pointer,*short_pointer);
+		short_pointer++;
+	}
+
+	printf("type casting, short to byte\n");
+	byte_pointer = (unsigned char *)short_array;
+	for(int i=0;i<(size*2);i++){
+		printf("short pointer: %p; value: %u;\n",byte_pointer,*byte_pointer);
+		byte_pointer++;
+	}
+
+	
+	for (int n=0; n<4; n++){
+		cout << short_array[n] << ", ";
+	}
+	cout << endl;
+	return 0;
+}

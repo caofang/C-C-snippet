@@ -1,0 +1,27 @@
+/****************
+* Helloworld.cpp
+*****************/
+#include <iostream>
+#include <fstream>
+#include <string>
+#include <stdlib.h>
+
+using namespace std;
+
+int main()
+{
+
+	string cnt;
+	int value;
+
+	ifstream fin ("example.txt");
+	fin >> cnt;
+	value = atoi(cnt.c_str());	
+	fin.close();
+
+	ofstream fout ("example.txt");
+	fout << ++value << endl;
+	fout.close();
+
+	return 0;
+}

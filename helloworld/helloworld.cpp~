@@ -1,0 +1,30 @@
+#include <time.h>
+#include <sys/time.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <iostream>
+
+using namespace std;
+
+
+int main(int argc, char **argv)
+{	
+unsigned char frameNumberChar[4];
+int i=0;	
+	printf("\n\n");
+    cout << "hello world" << endl;
+
+	int num = 12345678;
+	int tmp = num;
+	int tmp1;
+        for(i=0; i<4; i++){
+
+            frameNumberChar[i] = tmp % 100;
+            tmp = tmp /100 ;
+	    tmp1
+            printf("%d\t%c\t%d\n",num,frameNumberChar[i],tmp);
+        
+        }
+                        
+    return 0;   
+}

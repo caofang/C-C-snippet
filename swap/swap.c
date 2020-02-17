@@ -2,19 +2,18 @@
  
 int main()
 {
-	unsigned int x=0xaa;
-	unsigned int y=0xbb;
+	unsigned int a=0xaa;
+	unsigned int b=0xbb;
 
 	printf("===== Before Swap =====\n");
-	printf("x = %x\ny = %x\n", x, y);
+	printf("a = %x\nb = %x\n", a, b);
 
 
+	a = a ^ b;
+	b = a ^ b;
+	a = a ^ b;
 	printf("===== After Swap =====\n");
-	x = x ^ y;
-	y = x ^ y;
-	x = x ^ y;
-
-	printf("x = %x\ny = %x\n", x, y);
+	printf("a = %x\nb = %x\n", a, b);
 
 	return 0;
 }
